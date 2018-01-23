@@ -73,7 +73,8 @@ while True:
             idx = int(detections[0, 0, i, 1])
 
             if CLASSES[idx] == "person":
-                os.system('play --no-show-progress --null --channels 1 synth %s sine %f' % (duration, freq))
+                print("got ya!!")
+                #os.system('play --no-show-progress --null --channels 1 synth %s sine %f' % (duration, freq))
 
             box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
             (startX, startY, endX, endY) = box.astype("int")
